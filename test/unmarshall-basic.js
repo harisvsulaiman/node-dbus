@@ -1,7 +1,7 @@
 var marshall   = require('../lib/marshall');
 var unmarshall = require('../lib/unmarshall');
 var assert     = require('assert');
-var hexy       = require('../lib/hexy').hexy;
+var hexy       = require('hexy').hexy;
 
 var Long = require('long');
 var LongMaxS64 = Long.fromString("9223372036854775807", false);
@@ -12,9 +12,6 @@ var LongMaxS53 = Long.fromString("9007199254740991", false);
 var LongMinS53 = Long.fromString("-9007199254740991", false);
 var LongMaxU53 = Long.fromString("9007199254740991", true);
 var LongMinU53 = Long.fromString("0", true);
-
-if( assert.deepStrictEqual === undefined )  // workaround for node 0.12
-    assert.deepStrictEqual = assert.deepEqual;
 
 function testOnly() {};
 

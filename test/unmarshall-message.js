@@ -2,10 +2,7 @@ var marshall = require('../lib/marshall');
 var unmarshall = require('../lib/unmarshall');
 var message = require('../lib/message');
 var assert = require('assert');
-var hexy = require('../lib/hexy').hexy;
-
-if( assert.deepStrictEqual === undefined )  // workaround for node 0.12
-    assert.deepStrictEqual = assert.deepEqual;
+var hexy = require('hexy').hexy;
 
 function msg2buff(msg) {
   return message.marshall(msg);
